@@ -1,6 +1,12 @@
 # speedtest-tracker
 Build a docker container for SpeedTest++ and some tools to track its results
 
+## Building the vontainer
+Simply use docker build to build the container:
+```
+docker build -t speedtest .
+```
+
 ## speedtest-influx.py
 Python to spin up the speedtest container and insert the results into an InfluxDB
 
