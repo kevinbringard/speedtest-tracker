@@ -49,16 +49,16 @@ def get_influx_json(my_json):
         'fields': {
             'lat': lat,
             'lon': lon,
-            'servers_online': servers_online,
+            'servers_online': int(servers_online),
             'name': name,
             'sponsor': sponsor,
             'distance': distance,
-            'latency': latency,
+            'latency': int(latency),
             'host': host,
-            'ping': ping,
-            'jitter': jitter,
-            'download': download,
-            'upload': upload,
+            'ping': int(ping),
+            'jitter': int(jitter),
+            'download': float(download),
+            'upload': float(upload),
             'status': status
         },
     }]
