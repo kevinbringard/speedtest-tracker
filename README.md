@@ -1,4 +1,4 @@
-# speedtest-docker
+# speedtest-tracker
 Build a docker container for SpeedTest++ and some tools to track its results
 
 ## speedtest-influx.py
