@@ -14,7 +14,7 @@ docker_client = docker.from_env()
 output = docker_client.containers.run("speedtest:latest",
                                        auto_remove=True,
                                        network_mode="host",
-                                       command="/speedtest --output json")
+                                       command="/speedtest.sh --output json")
 output = output.decode("utf-8")
 client = InfluxDBClient(host=INFLUX_HOST, port=INFLUX_PORT)
 client.switch_database(SPEEDTEST_DB)

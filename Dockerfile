@@ -30,10 +30,10 @@ ENV PACKAGES="\
     "
 COPY --from=speedtest-builder /usr/local/bin/SpeedTest /SpeedTest
 
-COPY entrypoint.sh /speedtest
+COPY speedtest.sh /speedtest.sh
 
 RUN \
-    chmod +x /speedtest \
+    chmod +x /speedtest.sh \
     && apt-get update \
     && apt-get -y install ${PACKAGES} \
     && apt-get -y autoremove \
@@ -42,4 +42,4 @@ RUN \
 
 ENV SHELL /bin/bash
 
-CMD ["/speedtest]
+CMD ["/speedtest.sh"]
