@@ -1,7 +1,7 @@
 # speedtest-tracker
 Build a docker container for SpeedTest++ and some tools to track its results
 
-## Building the vontainer
+## Building the container
 Simply use docker build to build the container:
 ```
 docker build -t speedtest .
